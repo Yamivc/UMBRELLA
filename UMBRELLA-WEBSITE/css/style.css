@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto+Condensed', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    min-height: 100vh;
+    background: linear-gradient(#0a0505, #060303)
+}
+
+/* Container principal*/
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+
+.logo {
+    color: rgb(183, 165, 165);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+/* Estilos para las listas que componen el navbar*/
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+    list-style: none;
+
+}
+
+.menu .navbar ul li a {
+
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+
+}
+
+
+
+.menu .navbar ul li a:hover {
+
+    color: red;
+
+}
+
+
+#menu {
+    display: none;
+
+}
+
+/*esto pertenece al icono del menu clase menu-icon*/
+.menu-icon {
+    width: 50px;
+
+}
+
+.menu label {
+
+    cursor: pointer;
+    display: none;
+}
+
+/* aqui ACABA el NAVBAR*/
+
+/* aqui EMPIEZA LA PARTE PARALLAX*/
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    background-color: #060303;
+
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+    z-index: 1000;
+
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+.parallax#zombies_front {
+    z-index: 10;
+}
+
+#hometext {
+    position: absolute;
+    margin-bottom: 100px;
+    padding-bottom: 200px;
+    color: rosybrown;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    font-weight: bolder;
+    z-index: 9;
+
+}
+
+
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: rgba(115, 78, 78, 0.5);
+    color: rosybrown;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(30px);
+}
+
+/* aqui ACABA LA PARTE PARALLAX*/
+
+/* GALLERY*/
+.gallery {
+
+    padding: 7em;
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+        gap:32px;
+}
+
+.gallery>img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #000;
+    transition: transform 0.5s cubic-bezier(0.5, 0.2, 0.2, 0.8);
+}
+
+.gallery>img:hover {
+    transform: scale(1.2); /*nivel de agrandamiento */
+    cursor: pointer;
+}
+
+
+/*EMPIEZA LOGIN*/
+
+.umbrella-section{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.umbrella-section.login-container {
+    background-color: rgba(0, 0, 0, 0.452);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 60px;
+    border-radius: 15px;
+    color: white;
+}
+
+.umbrella-section.login-container input {
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.umbrella-section.login-container button {
+    background-color: black;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.umbrella-section.login-container button:hover {
+    background-color: rgb(248, 178, 248);
+    color: rgb(163, 29, 29);
+}
+/*TERMINA LOGIN*/
+
+/*aqui EMPIEZA SCROLL ANIMATION*/
+
+.revealing{
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .revealing:nth-child(1){
+    color: #264B4B;
+    }
+    .revealing:nth-child(2){
+    color: #42455a;
+    background: #70030d;
+  } 
+  .revealing:nth-child(3){
+    color: #70030d;
+  }
+  .revealing:nth-child(4){
+    color: #42455a;
+    background: #70030d;
+  }
+  .revealing .container{
+    margin: 100px;
+  }
+  .revealing h1{
+    font-size: 3rem;
+    margin: 20px;
+  }
+  .revealing h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .revealing .text-container{
+     display: flex;
+  }
+  .revealing .text-container .text-box{
+    margin: 20px;
+    padding: 20px;
+    background: #70030d;
+  }
+  .revealing .text-container .text-box h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 900px){
+    .revealing h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    .revealing .text-container{
+      flex-direction: column;
+    }
+  }
+  
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+
+  .revealing{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .revealing:nth-child(1){
+    color: #70030d;
+    }
+    .revealing:nth-child(2){
+    color: #42455a;
+    background: #70030d;
+  } 
+  .revealing:nth-child(3){
+    color: #70030d;
+  }
+  .revealing:nth-child(4){
+    color: #fff;
+    background: #70030d;
+  }
+  .revealing .container{
+    margin: 100px;
+  }
+  .revealing h1{
+    font-size: 3rem;
+    margin: 20px;
+  }
+  .revealing h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .revealing .text-container{
+     display: flex;
+  }
+  .revealing .text-container .text-box{
+    margin: 20px;
+    padding: 20px;
+    background: #70030d;
+  }
+  .revealing .text-container .text-box h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+
+  
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+/*aqui termina las columnas*/
+
+.sec {
+    position: relative;
+    padding: 20px;
+    background: #060303;
+    text-align: justify;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    
+    color: rgb(219, 217, 217);
+}
+
+.sec p {
+
+    
+    color: rgb(219, 217, 217);
+    padding: 50px;
+
+}
+
+/* aqui empieza el MAIN*/
+
+.custom-text {
+    color: rgb(219, 217, 217);
+    text-align: justify;
+   
+}
+
+
+
+/* aqui ACABA el MAIN*/
+
+
+
+/* Styles for small screens (max-width: 950px) */
+@media only screen and (max-width: 950px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+
+    }
+
+    .menu .navbar {
+
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #264B4B;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+}
+
+/* Styles for small screens (max-width: 950px) */
+@media only screen and (max-width: 950px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+
+    }
+
+    .menu .navbar {
+
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #264B4B;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+}
+
+/* Styles for medium-sized screens (min-width: 600px) */
+@media only screen and (min-width: 600px) {}
+
+
+/* Styles for medium-sized screens (min-width: 768px) */
+@media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 950px) {
+        .menu {
+            padding: 30px;
+        }
+    
+        .menu label {
+            display: initial;
+    
+        }
+    
+        .menu .navbar {
+    
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #264B4B;
+            display: none;
+        }
+    
+        .menu .navbar ul li {
+            width: 100%;
+    
+        }
+    
+        #menu:checked~.navbar {
+            display: initial;
+        }
+    }
+}
+
+/* Styles for large screens (min-width: 992px) */
+@media only screen and (min-width: 992px) {
+    /* Add your specific styles for screens 992px and wider here */
+}
+
+/* Styles for extra-large screens (min-width: 1200px) */
+@media only screen and (min-width: 1200px) {
+    /* Add your specific styles for screens 1200px and wider here */
+}
